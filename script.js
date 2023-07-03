@@ -1,0 +1,56 @@
+document.querySelector('.cross').style.display='none';
+document.querySelector('.ham').addEventListener("click",()=>{
+    document.querySelector('.sidebar').classList.toggle('sidebargo');
+    if(document.querySelector('.sidebar').classList.contains('sidebargo')){
+        document.querySelector('.ham').style.display='inline';
+        document.querySelector('.cross').style.display='none';
+    }
+    else{
+        document.querySelector('.ham').style.display='none';
+        setTimeout(()=>{
+            document.querySelector('.cross').style.display='inline';
+        },300)
+    }
+})
+document.querySelector('.cross').addEventListener("click",()=>{
+    document.querySelector('.sidebar').classList.toggle('sidebargo');
+    if(document.querySelector('.sidebar').classList.contains('sidebargo')){
+        setTimeout(()=>{
+            document.querySelector('.ham').style.display='inline';
+        },300)
+        document.querySelector('.cross').style.display='none';
+    }
+    else{
+        document.querySelector('.ham').style.display='none';
+        setTimeout(()=>{
+            document.querySelector('.cross').style.display='inline';
+        },300)
+    }
+})
+try{
+    document.getElementById("btn").addEventListener("click",()=>{
+        alert("Response Sent");
+    })
+}
+catch(err){
+
+}
+try{
+    document.getElementsByClassName("b1")[0].addEventListener("click",()=>{
+        window.open("https://github.com/suryanshp121");
+    })
+    document.getElementsByClassName("b2")[0].addEventListener("click",()=>{
+        window.open("https://www.linkedin.com/in/suryansh-pandey-6ba3a9229/");
+    })
+    document.getElementsByClassName("b3")[0].addEventListener("click",()=>{
+        window.open("https://www.instagram.com/suryansh_pandey269/");
+    })
+}
+catch(err){
+
+}
+console.log(document.getElementById("c1").offsetWidth);
+document.getElementById("c1").style.height=document.getElementById("c1").offsetWidth;
+console.log(document.getElementById("c1").offsetHeight);
+document.getElementById("c2").style.height=document.getElementById("c2").offsetWidth;
+document.getElementById("c3").style.height=document.getElementById("c3").offsetWidth;
